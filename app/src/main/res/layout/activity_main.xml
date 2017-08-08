@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.deepbhai.easyquiz.MainActivity">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/background"
+        android:id="@+id/background"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo1"
+        android:id="@+id/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:text="LEARN THE ART OF INVESTING OF PLAYING"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView_home"
+        android:textStyle="normal|bold"
+        android:textSize="30sp"
+        android:textColor="#ffffff"
+        android:textAlignment="center"
+        android:layout_above="@+id/btnPlayNow"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="115dp" />
+
+    <Button
+        android:text="PLAY NOW"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPlayNow"
+        android:background="@drawable/roundbutton"
+        android:layout_width="wrap_content"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="40dp"
+        android:paddingRight="40dp"
+        android:textSize="36sp"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="106dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:onClick="selectRange" />
+
+</RelativeLayout>
