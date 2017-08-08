@@ -2,7 +2,6 @@ package com.example.deepbhai.easyquiz;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.drawable.Drawable;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -48,8 +47,12 @@ public class ActiveGame extends AppCompatActivity {
     }
 
     public int randomOperator(){
+        int maxx = max;
+        if(max<=3){
+            maxx = 3;
+        }
         Random random = new Random();
-        int randomOperator = random.nextInt(4 - 1 + 1) + 1;
+        int randomOperator = random.nextInt(maxx - 1 + 1) + 1;
         assignOperator(randomOperator);
         return randomOperator;
         /*if(fl<=3 && mth_opn == 4){
@@ -136,7 +139,7 @@ public class ActiveGame extends AppCompatActivity {
         Random random = new Random();
         int divideCount=0;
         divideRandom();
-        int ran = random.nextInt(50);
+        int ran = random.nextInt(50 - 2 + 1) + 2;
         if(value2 * ran <= max){
             value1 = value2 * ran;
             answer= value1/value2;
@@ -155,7 +158,7 @@ public class ActiveGame extends AppCompatActivity {
     public void divideRandom(){
         Random random = new Random();
         value2 = random.nextInt(max - min + 1) + min;
-        if(String.valueOf(value2).length()> 3){
+        if(String.valueOf(value2).length()> 3 || value2 == 1){
             divideRandom();
         }
     }
@@ -709,12 +712,12 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans1 == answer){
-            viewans1.setBackgroundColor(Color.rgb(92,184,92));
+            viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
 
         }else{
-            viewans1.setBackgroundColor(Color.RED);
+            viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
         }
@@ -723,11 +726,11 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans2 == answer){
-            viewans2.setBackgroundColor(Color.rgb(92,184,92));
+            viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
-            viewans2.setBackgroundColor(Color.RED);
+            viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
         }
@@ -737,11 +740,11 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans3 == answer){
-            viewans3.setBackgroundColor(Color.rgb(92,184,92));
+            viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
-            viewans3.setBackgroundColor(Color.RED);
+            viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
         }
@@ -751,11 +754,11 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans4 == answer){
-            viewans4.setBackgroundColor(Color.rgb(92,184,92));
+            viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
-            viewans4.setBackgroundColor(Color.RED);
+            viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
         }
@@ -766,11 +769,11 @@ public class ActiveGame extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             public void run() {
                 randomOperator();
+                viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewblue));
+                viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewblue));
+                viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewblue));
+                viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewblue));
                 disableButton(true);
-                viewans1.setBackgroundColor(Color.rgb(51,181,229));
-                viewans2.setBackgroundColor(Color.rgb(51,181,229));
-                viewans3.setBackgroundColor(Color.rgb(51,181,229));
-                viewans4.setBackgroundColor(Color.rgb(51,181,229));
             }
         }, 1000);
     }
@@ -780,7 +783,7 @@ public class ActiveGame extends AppCompatActivity {
             public void onTick(long millisUntilFinished) {
                 time.setText(String.valueOf(millisUntilFinished / 1000));
                 if(millisUntilFinished<=10000){
-                    time.setBackgroundColor(Color.RED);
+                    time.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
                 }
             }
 

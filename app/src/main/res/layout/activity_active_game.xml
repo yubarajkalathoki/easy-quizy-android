@@ -90,43 +90,8 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:background="@android:color/holo_blue_light"
-        android:layout_below="@+id/viewOperator"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="161dp" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewAnswer4"
-        android:onClick="checkAnswerFour"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:background="@android:color/holo_blue_light"
-        android:layout_below="@+id/viewAnswer3"
-        android:layout_alignParentStart="true" />
-
-    <TextView
-        android:text="0"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/viewAnswer3"
-        android:onClick="checkAnswerThree"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
-        android:textAlignment="center"
-        android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:background="@android:color/holo_blue_light"
-        android:layout_below="@+id/viewAnswer2"
+        android:background="@drawable/roundtextviewblue"
+        android:layout_centerVertical="true"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -142,8 +107,45 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:background="@android:color/holo_blue_light"
+        android:background="@drawable/roundtextviewblue"
         android:layout_below="@+id/viewAnswer1"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewAnswer3"
+        android:onClick="checkAnswerThree"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:background="@drawable/roundtextviewblue"
+        android:layout_below="@+id/viewAnswer2"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="11dp" />
+
+    <TextView
+        android:text="0"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewAnswer4"
+        android:onClick="checkAnswerFour"
+        android:background="@drawable/roundtextviewblue"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:textSize="24sp"
+        android:layout_below="@+id/viewAnswer3"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp" />
 
 </RelativeLayout>
