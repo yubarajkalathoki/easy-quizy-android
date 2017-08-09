@@ -55,7 +55,7 @@ public class ActiveGame extends AppCompatActivity {
 
     public int randomOperator(){
         int maxx;
-        if(max<=3){
+        if((min!=1 && min*2>max) || max<=3 || max>999){
             maxx = 3;
         }else{
             maxx = 4;
