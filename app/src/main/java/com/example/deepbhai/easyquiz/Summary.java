@@ -24,7 +24,8 @@ public class Summary extends AppCompatActivity {
     }
 
     public void playAgain(View view) {
-        Intent intent = new Intent(this, SelectRange.class);
+        Intent intent = new Intent(getApplicationContext(), SelectRange.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
@@ -33,4 +34,12 @@ public class Summary extends AppCompatActivity {
         right.setText("Right Answer: " + rightAns);
         wrong.setText("Wrong Answer: " + wrongAns);
     }
+
+    @Override
+    public void onBackPressed() {
+        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(intent);
+    }
+
 }

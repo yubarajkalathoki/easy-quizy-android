@@ -14,6 +14,32 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true" />
 
+
+    <ProgressBar
+        android:id="@+id/progressBarCircle"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/drawable_circle_dark_blue"
+        android:indeterminate="false"
+        android:max="60"
+        android:progress="60"
+        android:progressDrawable="@drawable/drawable_circle_yellow"
+        android:rotation="-90"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/textViewTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="60"
+        android:textColor="@color/colorYellow"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -22,12 +48,11 @@
         android:paddingBottom="15dp"
         android:paddingLeft="25dp"
         android:paddingRight="25dp"
-        android:background="@android:color/holo_blue_dark"
+        android:background="@drawable/roundtextviewblue"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:layout_alignBaseline="@+id/viewValue1"
-        android:layout_alignBottom="@+id/viewValue1"
+        android:layout_below="@+id/progressBarCircle"
         android:layout_centerHorizontal="true" />
 
     <TextView
@@ -43,10 +68,9 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:layout_alignBaseline="@+id/viewValue2"
-        android:layout_alignBottom="@+id/viewValue2"
-        android:layout_alignParentStart="true"
-        android:layout_marginStart="52dp" />
+        android:layout_marginStart="48dp"
+        android:layout_below="@+id/progressBarCircle"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="0"
@@ -54,7 +78,6 @@
         android:layout_height="wrap_content"
         android:background="@drawable/roundbutton"
         android:id="@+id/viewValue2"
-        android:layout_marginTop="96dp"
         android:paddingTop="15dp"
         android:paddingBottom="15dp"
         android:paddingLeft="15dp"
@@ -62,20 +85,9 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:layout_marginEnd="46dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true" />
-
-    <Button
-        android:text="60"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="21dp"
-        android:id="@+id/btnTimer"
-        android:background="@drawable/roundbutton"
-        android:textColor="#ffffff"
-        android:layout_alignParentTop="true"
-        android:layout_alignEnd="@+id/viewValue2" />
+        android:layout_marginStart="25dp"
+        android:layout_below="@+id/progressBarCircle"
+        android:layout_toEndOf="@+id/progressBarCircle" />
 
     <TextView
         android:text="0"
@@ -91,7 +103,10 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:background="@drawable/roundtextviewblue"
-        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/viewAnswer2"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -108,9 +123,11 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:background="@drawable/roundtextviewblue"
-        android:layout_below="@+id/viewAnswer1"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="10dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/viewAnswer3"
+        android:layout_alignParentStart="true" />
 
     <TextView
         android:text="0"
@@ -126,9 +143,11 @@
         android:textColor="#ffffff"
         android:textSize="24sp"
         android:background="@drawable/roundtextviewblue"
-        android:layout_below="@+id/viewAnswer2"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="11dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:layout_above="@+id/viewAnswer4"
+        android:layout_alignParentEnd="true" />
 
     <TextView
         android:text="0"
@@ -144,8 +163,10 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:layout_below="@+id/viewAnswer3"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="13dp" />
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

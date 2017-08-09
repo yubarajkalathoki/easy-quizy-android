@@ -31,12 +31,17 @@ public class SelectRange extends AppCompatActivity {
             lower.setError("Enter Value here");
         }else if(String.valueOf(upperLimit).length() == 0){
             upper.setError("Enter Value here");
-        }else{
+        }else {
             Intent intent = new Intent(this, ActiveGame.class);
-            intent.putExtra("lowerLimit",lowerLimit);
-            intent.putExtra("upperLimit",upperLimit);
+            intent.putExtra("lowerLimit", lowerLimit);
+            intent.putExtra("upperLimit", upperLimit);
             startActivity(intent);
         }
 
+    }
+
+    public void onBackPressed() {
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 }

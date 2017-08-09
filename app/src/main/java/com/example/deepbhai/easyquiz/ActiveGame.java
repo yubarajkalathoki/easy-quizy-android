@@ -6,17 +6,19 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.AlphaAnimation;
+import android.view.animation.Animation;
 import android.widget.Button;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import java.util.Random;
 import android.os.Handler;
+import android.widget.Toast;
 
-import static com.example.deepbhai.easyquiz.R.id.btnTimer;
 
 public class ActiveGame extends AppCompatActivity {
     TextView viewValue1, viewValue2, viewans1, viewans2, viewans3, viewans4, operator;
-    Button time;
     int max, min;
     int ans1=0;
     int ans2=0;
@@ -28,6 +30,11 @@ public class ActiveGame extends AppCompatActivity {
     int rightAns = 0;
     int wrongAns = 0;
     int totalQues = 0;
+    long timeCountInMilliSeconds = 60000;
+    private ProgressBar progressBarCircle;
+    private TextView textViewTime;
+    private CountDownTimer countDownTimer;
+    private boolean doubleBackToExitPressedOnce = false;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,15 +48,17 @@ public class ActiveGame extends AppCompatActivity {
         viewans3 = (TextView) findViewById(R.id.viewAnswer3);
         viewans4 = (TextView) findViewById(R.id.viewAnswer4);
         operator = (TextView) findViewById(R.id.viewOperator);
-        time = (Button) findViewById(btnTimer);
         randomOperator();
-        timer();
+        initViews();
+        startCountDownTimer();
     }
 
     public int randomOperator(){
-        int maxx = max;
+        int maxx;
         if(max<=3){
             maxx = 3;
+        }else{
+            maxx = 4;
         }
         Random random = new Random();
         int randomOperator = random.nextInt(maxx - 1 + 1) + 1;
@@ -120,13 +129,13 @@ public class ActiveGame extends AppCompatActivity {
 
     public void multiply(){
         generateRandom();
-        range();
+        //range();
         answer = value1 * value2;
         viewValue1.setText(String.valueOf(value1));
         viewValue2.setText(String.valueOf(value2));
         generateAnswer();
     }
-
+    /*
     public void range() {
         if (min <= 999) {
             if (max > 999) {
@@ -134,7 +143,7 @@ public class ActiveGame extends AppCompatActivity {
                 generateRandom();
             }
         }
-    }
+    }*/
     public void divide(){
         Random random = new Random();
         int divideCount=0;
@@ -775,22 +784,35 @@ public class ActiveGame extends AppCompatActivity {
                 viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewblue));
                 disableButton(true);
             }
-        }, 1000);
+        }, 500);
     }
-    public void timer(){
-        new CountDownTimer(60000, 1000) {
+    public void startCountDownTimer() {
 
+        countDownTimer = new CountDownTimer(timeCountInMilliSeconds, 1000) {
+            @Override
             public void onTick(long millisUntilFinished) {
-                time.setText(String.valueOf(millisUntilFinished / 1000));
-                if(millisUntilFinished<=10000){
-                    time.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
+                if(millisUntilFinished /1000 <=10){
+                    progressBarCircle.setProgressDrawable(getResources().getDrawable(R.drawable.drawable_circle_red));
+                    textViewTime.setTextColor(Color.RED);
+                    blink();
                 }
+                textViewTime.setText(String.valueOf(millisUntilFinished / 1000));
+
+                progressBarCircle.setProgress((int) (millisUntilFinished / 1000));
+
             }
 
+            @Override
             public void onFinish() {
                 summary(totalQues, rightAns, wrongAns);
             }
+
         }.start();
+    }
+
+    private void initViews() {
+        progressBarCircle = (ProgressBar) findViewById(R.id.progressBarCircle);
+        textViewTime = (TextView) findViewById(R.id.textViewTime);
     }
 
     public void disableButton(Boolean a){
@@ -806,5 +828,36 @@ public class ActiveGame extends AppCompatActivity {
         intent.putExtra("wrongAnswer",wrongAnswer);
         startActivity(intent);
     }
+    public void blink(){
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(200); //You can manage the blinking time with this parameter
+        anim.setStartOffset(20);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        textViewTime.startAnimation(anim);
+    }
+
+
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            countDownTimer.cancel();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to stop", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+            }
+        }, 2000);
+    }
+
 
 }
