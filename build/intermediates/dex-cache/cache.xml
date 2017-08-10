@@ -3,87 +3,6 @@
 
     <item
         is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/0abf0765b1299e2c863657d3295e0d3753b93ad7/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="f02263e35e52668dd17b73bf961437e3d562b35f">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_755f9dbfd5d870751b2f062144f698b8d68934cd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.1.0/support-annotations-25.1.0.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="64cb6b229a8bdfd907bc8dd46839a0053e4c018d">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.1.0_3004b78cdfa03e793b7938fd2c4aa134ca56b665/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/336c739aa747e062be6b49dc0e09ef7a3f4863a2/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_426bf75d982f5692f390d526ab296236a3464eb5/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/7e4406ad169ad4e6dfa0982f564ff2e2dae562f1/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6fb6ac3e8d3b9013819920d9ea11f3803c4c0033">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_bd2b4b45592c64f959a260372444991bec58037c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/621c4626aa77c89cc49080c6c87a799b702e0d6e/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="2a53c4f3518116b8c6aee0e477233f0f7da8616f">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e83b130c64758a4ff613fb5faec105faedc677b7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/561e8b7bf1e5bf18b233538f9854d7955b3bc99f/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="0a0ef86b7fa568a52bf6214a0326ca1f1d618da7">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f31b2dce6c790122d351548ddb8e3c2fc58060b4/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/7a5092810e0868318ede0f2721fa3f098b9f36cd/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c3820493eaeb0166f010d330a347a6a71fcfb937/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/3b2397019ac0ae06dae7edb589123cf21da02ba7/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="1630658fbc2d222b988603c27b4a4249586fbfe7">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_87164dfcdb28797dc5e31b747104dea00e09d7e7/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="b078f321d1ed12c1d9f94e9f351c966927fa1013">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b0f82f220ee726e367d8fc01576d2f5d75096a4a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -93,21 +12,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/30344414f4f0ca3fdf9db3d7512f64bb3f476f46/output/jars/classes.jar"
+        jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ca3c7aa31e2726a400a6e552b93cb9f63c9a1e6d">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3f8e5bd476afe0f8e3547a8d3e61d313fe1bc9c2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/Users/deepbhai/.android/build-cache/199b77afd89ac3e629378f826e13e3df19fad047/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="e79aa3d9a16f8c9f16377c0608de70a8f31e5d80">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4bc26de2fe260469bf1bb289a208c8b488f16225/classes.dex" />
+        sha1="b238e9cba8cfcc71bf94e1d865543f6a7d929c0e">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b0f82f220ee726e367d8fc01576d2f5d75096a4a/classes.dex" />
     </item>
 
 </items>

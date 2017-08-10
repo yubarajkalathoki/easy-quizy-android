@@ -2,6 +2,7 @@ package com.example.deepbhai.easyquiz;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -35,12 +36,16 @@ public class ActiveGame extends AppCompatActivity {
     private TextView textViewTime;
     private CountDownTimer countDownTimer;
     private boolean doubleBackToExitPressedOnce = false;
+    MediaPlayer rightSound, wrongSound,timerSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_active_game);
         min = getIntent().getIntExtra("lowerLimit", 0);
         max = getIntent().getIntExtra("upperLimit", 0);
+        rightSound = MediaPlayer.create(this, R.raw.right);
+        wrongSound = MediaPlayer.create(this, R.raw.wrong);
+        timerSound = MediaPlayer.create(this, R.raw.timer);
         viewValue1 = (TextView) findViewById(R.id.viewValue1);
         viewValue2 = (TextView) findViewById(R.id.viewValue2);
         viewans1 = (TextView) findViewById(R.id.viewAnswer1);
@@ -721,24 +726,29 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans1 == answer){
+            rightSound.start();
             viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
 
         }else{
+            wrongSound.start();
             viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
         }
     }
+
     public void checkAnswerTwo(View view) {
         disableButton(false);
         totalQues++;
         if(ans2 == answer){
+            rightSound.start();
             viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
+            wrongSound.start();
             viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
@@ -749,10 +759,12 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans3 == answer){
+            rightSound.start();
             viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
+            wrongSound.start();
             viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
@@ -763,10 +775,12 @@ public class ActiveGame extends AppCompatActivity {
         disableButton(false);
         totalQues++;
         if(ans4 == answer){
+            rightSound.start();
             viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
             rightAns++;
             delay();
         }else{
+            wrongSound.start();
             viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
             wrongAns++;
             delay();
@@ -787,7 +801,6 @@ public class ActiveGame extends AppCompatActivity {
         }, 500);
     }
     public void startCountDownTimer() {
-
         countDownTimer = new CountDownTimer(timeCountInMilliSeconds, 1000) {
             @Override
             public void onTick(long millisUntilFinished) {
@@ -795,6 +808,9 @@ public class ActiveGame extends AppCompatActivity {
                     progressBarCircle.setProgressDrawable(getResources().getDrawable(R.drawable.drawable_circle_red));
                     textViewTime.setTextColor(Color.RED);
                     blink();
+                }
+                if(millisUntilFinished /1000 ==10){
+                    timerSound.start();
                 }
                 textViewTime.setText(String.valueOf(millisUntilFinished / 1000));
 
@@ -804,12 +820,12 @@ public class ActiveGame extends AppCompatActivity {
 
             @Override
             public void onFinish() {
+                timerSound.stop();
                 summary(totalQues, rightAns, wrongAns);
             }
 
         }.start();
     }
-
     private void initViews() {
         progressBarCircle = (ProgressBar) findViewById(R.id.progressBarCircle);
         textViewTime = (TextView) findViewById(R.id.textViewTime);
