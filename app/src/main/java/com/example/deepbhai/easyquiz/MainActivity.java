@@ -16,8 +16,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void selectRange(View view) {
-        Intent intent= new Intent(this, SelectRange.class);
+    public void selectLevel(View view) {
+        Intent intent= new Intent(this, selectLevel.class);
         startActivity(intent);
     }
 

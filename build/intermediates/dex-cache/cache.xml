@@ -3,6 +3,123 @@
 
     <item
         is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/49a4614aa109b753b1998baee1ef5a9923fb844f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="95519720620b553f63afc789beba9ad582807f7c">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_3cf52c412e5606edeb642d688e4440841afe4554/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/53d4da12a4046da9c09b952476063bafd3d60acc/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="38789e20ace9ab7dbd00554bd2673ab424478d3b">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_b1c2d4c830e0e8ac17f18e2c582b3b4ea148ae41/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/87163d22e57998d15ee7f50efaaf26cbb0981366/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9ca13c6d25b548de9a264b7a35fbcb7a64d71088/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/61dc527d66de7802f51308350a1f2be4764f0310/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_4637e3762fa1defadd5e8ad9bffbfaf318ecdc6c/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/ec45950051a39ce3ab03e5c3719a7b58bb748eac/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_c83ad15fecf00401b24cd798dd2092961ce558c2/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/9ce73fb7dd96d997a37dfb7e980253a72dc31103/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_9de9f1b00ffd22687203dfd455b5d095fbef5d2b/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/ea003426e05115f088f7aa89a06c9fe818be4be8/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d4cf6227dd6a2ceff0f7dcf0c324380b7abf2c28">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f55ed5cccec77021e78ebca163464ad8be85ea13/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_0e33c1222a6a226e08f07fcc638e296d914a3610/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="75720035de16e11555f19495a3024179a6a851a3">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b0f82f220ee726e367d8fc01576d2f5d75096a4a/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/e285614a7c6a096f8f6157def934360137217e5a/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f36114e205df8bd591605962aacd2d9e9ff382ff/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/16e0e2f0b4090391b3f9cd12eeb0bd1e19e3386e/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_49434f06ef3eb3be8aebc8069e987cc093c85e43/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/5a91d8738bd3b176df497197efc7a0624c251c9f/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_844f28c5bc4bb1a69be7902d747d43a2a3b8ba50/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/Users/deepbhai/.android/build-cache/be82a60e5aed3f0dfc745e24e5796b7d78b1f5b9/output/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_efd13abfad2af9565a719586578762d3792821c0/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
@@ -12,12 +129,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jar="/Users/deepbhai/.android/build-cache/23d5459ccd2c0948535987ba1e141d05a60a85ce/output/jars/classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b238e9cba8cfcc71bf94e1d865543f6a7d929c0e">
-        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_b0f82f220ee726e367d8fc01576d2f5d75096a4a/classes.dex" />
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/deepbhai/AndroidStudioProjects/EasyQuiz/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5a964340a695ce1b85097bcdd0b6f392912e1f8a/classes.dex" />
     </item>
 
 </items>

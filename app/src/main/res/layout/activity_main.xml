@@ -53,6 +53,6 @@
         android:layout_marginBottom="106dp"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="selectRange" />
+        android:onClick="selectLevel" />
 
 </RelativeLayout>

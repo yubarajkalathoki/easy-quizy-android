@@ -3,6 +3,7 @@ package com.example.deepbhai.easyquiz;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.view.View;
@@ -16,7 +17,21 @@ public class SelectRange extends AppCompatActivity {
         setContentView(R.layout.activity_select_range);
         lower=(EditText)findViewById(R.id.getLower);
         upper=(EditText)findViewById(R.id.getUpper);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setTitle("Easy Quizy");
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+                //What to do on back clicked
+            }
+        });
     }
+
+
 
     public void activeGame(View view) {
         String getLower = lower.getText().toString();
@@ -51,8 +66,7 @@ public class SelectRange extends AppCompatActivity {
 
     }
 
-    public void onBackPressed() {
-        Intent intent = new Intent(this, MainActivity.class);
-        startActivity(intent);
-    }
+
+
+
 }

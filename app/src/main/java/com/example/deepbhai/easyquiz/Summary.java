@@ -24,7 +24,7 @@ public class Summary extends AppCompatActivity {
     }
 
     public void playAgain(View view) {
-        Intent intent = new Intent(getApplicationContext(), SelectRange.class);
+        Intent intent = new Intent(getApplicationContext(), selectLevel.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
