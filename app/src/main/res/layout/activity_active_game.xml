@@ -4,16 +4,10 @@
     android:id="@+id/activity_active_game"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.deepbhai.easyquiz.ActiveGame">
-
-    <ImageView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@+id/background"
-        android:background="@drawable/background"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
-
+    android:background="@drawable/background"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context="com.easyquizy.ActiveGame">
 
     <ProgressBar
         android:id="@+id/progressBarCircle"
@@ -28,7 +22,31 @@
         android:rotation="-90"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
+    <TextView
+        android:text="0"
+        android:id="@+id/correct"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:drawableLeft="@drawable/right"
+        android:drawablePadding="10dp"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"/>
+    <TextView
+        android:text="0"
+        android:id="@+id/wrong"
+        android:layout_marginRight="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height= "wrap_content"
+        android:layout_below="@id/correct"
+        android:drawableLeft="@drawable/wrong"
+        android:drawablePadding="10dp"
+        android:layout_alignParentRight="true"
+        android:textSize="30sp"
+        android:textColor="@color/colorWhite"/>
     <TextView
         android:id="@+id/textViewTime"
         android:layout_width="wrap_content"
@@ -87,32 +105,33 @@
         android:textSize="24sp"
         android:layout_below="@+id/progressBarCircle"
         android:layout_toEndOf="@+id/progressBarCircle" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/firstTwo"
+    android:layout_above="@+id/lastTwo"
+    android:paddingBottom="30dp">
 
     <TextView
-        android:text="0"
-        android:soundEffectsEnabled="false"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/viewAnswer1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:background="@drawable/roundtextviewblue"
         android:onClick="checkAnswerOne"
-        android:paddingTop="15dp"
-        android:paddingBottom="15dp"
-        android:paddingLeft="15dp"
-        android:paddingRight="15dp"
+        android:padding="15dp"
+        android:soundEffectsEnabled="false"
+        android:text="0"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:background="@drawable/roundtextviewblue"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_above="@+id/viewAnswer2"
-        android:layout_alignParentStart="true" />
+        android:textSize="24sp" />
 
     <TextView
         android:text="0"
         android:soundEffectsEnabled="false"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/viewAnswer2"
         android:onClick="checkAnswerTwo"
@@ -123,17 +142,22 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:background="@drawable/roundtextviewblue"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_above="@+id/viewAnswer3"
-        android:layout_alignParentStart="true" />
+        android:background="@drawable/roundtextviewblue"/>
 
+</LinearLayout>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/lastTwo"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentStart="true"
+    android:layout_marginBottom="50dp">
     <TextView
         android:text="0"
         android:soundEffectsEnabled="false"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/viewAnswer3"
         android:onClick="checkAnswerThree"
@@ -144,17 +168,13 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:background="@drawable/roundtextviewblue"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="5dp"
-        android:layout_above="@+id/viewAnswer4"
-        android:layout_alignParentEnd="true" />
+        android:background="@drawable/roundtextviewblue"/>
 
     <TextView
         android:text="0"
         android:soundEffectsEnabled="false"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
+        android:layout_weight="1"
         android:layout_height="wrap_content"
         android:id="@+id/viewAnswer4"
         android:onClick="checkAnswerFour"
@@ -165,11 +185,7 @@
         android:paddingRight="15dp"
         android:textAlignment="center"
         android:textColor="#ffffff"
-        android:textSize="24sp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginBottom="30dp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        android:textSize="24sp"/>
 
+</LinearLayout>
 </RelativeLayout>

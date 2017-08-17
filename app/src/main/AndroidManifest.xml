@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.deepbhai.easyquiz">
+    package="com.easyquizy">
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".MainActivity"
+            android:name="com.easyquizy.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -18,16 +19,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SelectRange"
+            android:name="com.easyquizy.SelectRange"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".ActiveGame"
+            android:name="com.easyquizy.ActiveGame"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".Summary"
+            android:name="com.easyquizy.Summary"
             android:screenOrientation="portrait" />
         <activity
-            android:name=".selectLevel"
+            android:name="com.easyquizy.selectLevel"
             android:label="@string/title_activity_select_level"
             android:theme="@style/AppTheme"></activity>
     </application>
