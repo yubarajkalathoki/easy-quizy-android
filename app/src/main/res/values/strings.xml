@@ -3,4 +3,5 @@
     <string name="toolbar">Easy Quizy</string>
     <string name="title_activity_testing">testing</string>
     <string name="title_activity_select_level">selectLevel</string>
+    <string name="title_activity_leaderboard">leaderboard</string>
 </resources>

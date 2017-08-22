@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.easyquizy.MainActivity"
+            android:name=".MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -19,17 +19,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.easyquizy.SelectRange"
+            android:name=".SelectRange"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.easyquizy.ActiveGame"
+            android:name=".ActiveGame"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.easyquizy.Summary"
+            android:name=".Summary"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.easyquizy.selectLevel"
+            android:name=".selectLevel"
             android:label="@string/title_activity_select_level"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name=".leaderboard"
+            android:label="@string/title_activity_leaderboard"
             android:theme="@style/AppTheme"></activity>
     </application>
 

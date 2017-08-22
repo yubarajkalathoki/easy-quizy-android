@@ -20,10 +20,12 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo1"
+        app:srcCompat="@drawable/logo"
         android:id="@+id/logo"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/logo_backgroud"/>
 
     <TextView
         android:text="LEARN THE ART OF INVESTING OF PLAYING"

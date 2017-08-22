@@ -6,6 +6,7 @@ import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.os.Handler;
+import android.support.v4.view.MotionEventCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
@@ -19,7 +20,7 @@ import java.util.Random;
 
 
 public class ActiveGame extends AppCompatActivity {
-    TextView viewValue1, viewValue2, viewans1, viewans2, viewans3, viewans4, operator, correct,wrong;
+    TextView viewValue1, viewValue2, viewans1, viewans2, viewans3, viewans4, operator, correct,wrong,finger;
     int max, min;
     int ans1=0;
     int ans2=0;
@@ -38,6 +39,7 @@ public class ActiveGame extends AppCompatActivity {
     private CountDownTimer countDownTimer;
     private boolean doubleBackToExitPressedOnce = false;
     boolean alreadyExecuted=false;
+    //private boolean clicked = false;
     MediaPlayer rightSound, wrongSound,timerSound;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -128,10 +130,22 @@ public class ActiveGame extends AppCompatActivity {
 
     public void subtract(){
         generateRandom();
-        answer = value1 - value2;
-        viewValue1.setText(String.valueOf(value1));
-        viewValue2.setText(String.valueOf(value2));
-        generateAnswer();
+        if(max == 10){
+            if(value1<=value2){
+                subtract();
+            }else{
+                answer = value1 - value2;
+                viewValue1.setText(String.valueOf(value1));
+                viewValue2.setText(String.valueOf(value2));
+                generateAnswer();
+            }
+        }else{
+            answer = value1 - value2;
+            viewValue1.setText(String.valueOf(value1));
+            viewValue2.setText(String.valueOf(value2));
+            generateAnswer();
+        }
+
     }
 
 
@@ -726,84 +740,87 @@ public class ActiveGame extends AppCompatActivity {
 
     //Checks Either Answer is correct or not
     public void checkAnswerOne(View view) {
-        checkTimerStarted();
-        disableButton(false);
-        totalQues++;
-        if(ans1 == answer){
-            rightSound.start();
-            viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
-            rightAns++;
-            correct.setText(String.valueOf(rightAns));
-            delay();
+            checkTimerStarted();
+            disableButton(false);
+            totalQues++;
+            if(ans1 == answer){
+                rightSound.start();
+                viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
+                rightAns++;
+                correct.setText(String.valueOf(rightAns));
+                delay();
 
-        }else{
-            wrongSound.start();
-            viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
-            wrongAns++;
-            wrong.setText(String.valueOf(wrongAns));
-            tickRightAnswer();
-            delay();
-        }
+            }else{
+                wrongSound.start();
+                viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
+                wrongAns++;
+                wrong.setText(String.valueOf(wrongAns));
+                tickRightAnswer();
+                delay();
+            }
+
     }
 
     public void checkAnswerTwo(View view) {
-        checkTimerStarted();
-        disableButton(false);
-        totalQues++;
-        if(ans2 == answer){
-            rightSound.start();
-            viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
-            rightAns++;
-            correct.setText(String.valueOf(rightAns));
-            delay();
-        }else{
-            wrongSound.start();
-            viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
-            wrongAns++;
-            wrong.setText(String.valueOf(wrongAns));
-            tickRightAnswer();
-            delay();
-        }
+            checkTimerStarted();
+            disableButton(false);
+            totalQues++;
+            if(ans2 == answer){
+                rightSound.start();
+                viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
+                rightAns++;
+                correct.setText(String.valueOf(rightAns));
+                delay();
+            }else{
+                wrongSound.start();
+                viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
+                wrongAns++;
+                wrong.setText(String.valueOf(wrongAns));
+                tickRightAnswer();
+                delay();
+            }
+
     }
 
     public void checkAnswerThree(View view) {
-        checkTimerStarted();
-        disableButton(false);
-        totalQues++;
-        if(ans3 == answer){
-            rightSound.start();
-            viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
-            rightAns++;
-            correct.setText(String.valueOf(rightAns));
-            delay();
-        }else{
-            wrongSound.start();
-            viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
-            wrongAns++;
-            wrong.setText(String.valueOf(wrongAns));
-            tickRightAnswer();
-            delay();
-        }
+            checkTimerStarted();
+            disableButton(false);
+            totalQues++;
+            if(ans3 == answer){
+                rightSound.start();
+                viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
+                rightAns++;
+                correct.setText(String.valueOf(rightAns));
+                delay();
+            }else{
+                wrongSound.start();
+                viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
+                wrongAns++;
+                wrong.setText(String.valueOf(wrongAns));
+                tickRightAnswer();
+                delay();
+            }
+
     }
 
     public void checkAnswerFour(View view) {
-        checkTimerStarted();
-        disableButton(false);
-        totalQues++;
-        if(ans4 == answer){
-            rightSound.start();
-            viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
-            rightAns++;
-            correct.setText(String.valueOf(rightAns));
-            delay();
-        }else{
-            wrongSound.start();
-            viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
-            wrongAns++;
-            wrong.setText(String.valueOf(wrongAns));
-            tickRightAnswer();
-            delay();
-        }
+            checkTimerStarted();
+            disableButton(false);
+            totalQues++;
+            if(ans4 == answer){
+                rightSound.start();
+                viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
+                rightAns++;
+                correct.setText(String.valueOf(rightAns));
+                delay();
+            }else{
+                wrongSound.start();
+                viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
+                wrongAns++;
+                wrong.setText(String.valueOf(wrongAns));
+                tickRightAnswer();
+                delay();
+            }
     }
     public void delay(){
         Handler handler = new Handler();
@@ -885,6 +902,8 @@ public class ActiveGame extends AppCompatActivity {
 
     }
 
+
+    /* Function to go back to previous screen when back button is pressed twice */
     @Override
     public void onBackPressed() {
         if (doubleBackToExitPressedOnce) {
@@ -906,19 +925,30 @@ public class ActiveGame extends AppCompatActivity {
             }
         }, 2000);
     }
+
+
+
+    /* Checks if timer has been started if not it will start the timer */
     private void checkTimerStarted(){
         if (!alreadyExecuted){
             startCountDownTimer();
             alreadyExecuted=true;
         }
     }
-    /*
-    @Override
+
+
+    /* Checks the number of finger touch on the screen at the same time */
+    /*@Override
     public boolean onTouchEvent(MotionEvent event) {
-        // TODO Auto-generated method stub
-        if (!alreadyExecuted){
-            alreadyExecuted=true;
+
+        if (event.getPointerCount() > 1) {
+            finger.setText("Number of finger touched: " + event.getPointerCount());
+            clicked = false;
+            return false;
+        } else {
+            finger.setText("Number of finger touched: " + event.getPointerCount());
+            clicked = true;
+            return true;
         }
-        return super.onTouchEvent(event);
     }*/
 }
