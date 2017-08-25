@@ -5,14 +5,18 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     private boolean doubleBackToExitPressedOnce = false;
+    ImageButton buttonSettings;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //buttonSettings = (ImageButton) findViewById(R.id.buttonSettings);
     }
 
     public void selectLevel(View view) {
@@ -42,4 +46,9 @@ public class MainActivity extends AppCompatActivity {
             }
         }, 2000);
     }
+
+
+    /*public void settings(View view) {
+        startActivity(new Intent(MainActivity.this, popup.class));
+    }*/
 }

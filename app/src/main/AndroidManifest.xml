@@ -34,7 +34,9 @@
         <activity
             android:name=".leaderboard"
             android:label="@string/title_activity_leaderboard"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".popup"
+            android:theme="@style/AppTheme.CustomThemeForPopUp"></activity>
     </application>
 
 </manifest>

@@ -744,14 +744,14 @@ public class ActiveGame extends AppCompatActivity {
             disableButton(false);
             totalQues++;
             if(ans1 == answer){
-                rightSound.start();
+                //rightSound.start();
                 viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
                 rightAns++;
                 correct.setText(String.valueOf(rightAns));
                 delay();
 
             }else{
-                wrongSound.start();
+                //wrongSound.start();
                 viewans1.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
                 wrongAns++;
                 wrong.setText(String.valueOf(wrongAns));
@@ -766,13 +766,13 @@ public class ActiveGame extends AppCompatActivity {
             disableButton(false);
             totalQues++;
             if(ans2 == answer){
-                rightSound.start();
+                //rightSound.start();
                 viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
                 rightAns++;
                 correct.setText(String.valueOf(rightAns));
                 delay();
             }else{
-                wrongSound.start();
+                //wrongSound.start();
                 viewans2.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
                 wrongAns++;
                 wrong.setText(String.valueOf(wrongAns));
@@ -787,13 +787,13 @@ public class ActiveGame extends AppCompatActivity {
             disableButton(false);
             totalQues++;
             if(ans3 == answer){
-                rightSound.start();
+                //rightSound.start();
                 viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
                 rightAns++;
                 correct.setText(String.valueOf(rightAns));
                 delay();
             }else{
-                wrongSound.start();
+                //wrongSound.start();
                 viewans3.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
                 wrongAns++;
                 wrong.setText(String.valueOf(wrongAns));
@@ -808,13 +808,13 @@ public class ActiveGame extends AppCompatActivity {
             disableButton(false);
             totalQues++;
             if(ans4 == answer){
-                rightSound.start();
+                //rightSound.start();
                 viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewgreen));
                 rightAns++;
                 correct.setText(String.valueOf(rightAns));
                 delay();
             }else{
-                wrongSound.start();
+                //wrongSound.start();
                 viewans4.setBackgroundDrawable(getResources().getDrawable(R.drawable.roundtextviewred));
                 wrongAns++;
                 wrong.setText(String.valueOf(wrongAns));
@@ -844,9 +844,9 @@ public class ActiveGame extends AppCompatActivity {
                     textViewTime.setTextColor(Color.RED);
                     blink();
                 }
-                if(millisUntilFinished /1000 ==10){
+                /*if(millisUntilFinished /1000 ==10){
                     timerSound.start();
-                }
+                }*/
                 textViewTime.setText(String.valueOf(millisUntilFinished / 1000));
 
                 progressBarCircle.setProgress((int) (millisUntilFinished / 1000));

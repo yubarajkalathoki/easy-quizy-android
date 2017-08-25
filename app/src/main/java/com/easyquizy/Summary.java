@@ -54,7 +54,6 @@ public class Summary extends AppCompatActivity {
         PieChart chart = (PieChart) findViewById(R.id.chart);
 
         Description description = new Description();
-        description.setTextColor(ColorTemplate.VORDIPLOM_COLORS[2]);
         description.setText("");
         chart.setDescription(description);
 
