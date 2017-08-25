@@ -844,9 +844,9 @@ public class ActiveGame extends AppCompatActivity {
                     textViewTime.setTextColor(Color.RED);
                     blink();
                 }
-                /*if(millisUntilFinished /1000 ==10){
+                if(millisUntilFinished /1000 ==10){
                     timerSound.start();
-                }*/
+                }
                 textViewTime.setText(String.valueOf(millisUntilFinished / 1000));
 
                 progressBarCircle.setProgress((int) (millisUntilFinished / 1000));
